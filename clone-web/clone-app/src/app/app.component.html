@@ -1,0 +1,82 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+            <a class="navbar-brand" href="#"><img class="logo-img" src="assets/logo.png" alt="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#listClones">List of Clones</a></li>
+                <li><a href="#">Clone Generator</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center vertical-center">
+    <div class="republic">
+        <h1 class="header-text">Welcome to the Clone Generator Central</h1>
+        <p>Come and generate your clones and collect them at the end.</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 home">
+            <img class="img-home" src="assets/kaminoan.jpg" alt="haminoan">
+            <h3 class="text-center">Kaminoans</h3>
+            <hr/>
+            <p>The Kaminoans will help you creat your clones just the way you want with some minor adjustments and constraints.</p>
+        </div>
+        <div class="col-sm-4 home">
+            <img class="img-home" src="assets/clones.png" alt="clones">
+            <h3 class="text-center">The laboratory</h3>
+            <hr/>
+            <p>State of the art facilities and equipments available for your best cloning technology.</p>
+        </div>
+        <div class="col-sm-4 home">
+            <img class="img-home" src="assets/clone.jpg" alt="logo">
+            <h3 class="text-center">The Clone</h3>
+            <hr/>
+            <p class="quote">"Clones can think creatively. You will find that they are immensely superior to droids."</p>
+            <p class="quote">―Lama Su</p>
+        </div>
+    </div>
+</div>
+<div id="listClones"></div>
+<div class="list container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Take a look at the pride and joy of the Empire</h3>
+            <hr/>
+            <br>
+        </div>
+    </div>
+    <div *ngIf="!(clones === undefined)">
+        <div *ngFor="let clone of clones" class="col-sm-4 text-center">
+            <img *ngIf="clone" class="img-home" [src]=carregarImagem(clone) alt="clone">
+            <h4>{{clone.nome}}</h4>
+            <h4>Idade: {{clone.idade}}</h4>
+            <h4>Data de Criação: {{clone.dataCriacao | date:'dd/MM/yyy'}}</h4>
+            <h4 *ngIf="clone.equipamento !== undefined">Equipamentos: {{clone?.equipamento}}</h4>
+            <h4 *ngIf="clone.equipamento === undefined">Equipamentos: Sem Equipamentos.</h4>
+            <br/>
+            <button type="button" class="btn btn-outline-edit btn-sm">Editar</button>
+            <button type="button" class="btn btn-outline-danger btn-sm">Deletar</button>
+        </div>
+    </div>
+    <div *ngIf="(clones === undefined)">
+        <div class="col-sm-12 text-center">
+            <img class="img-home img-republic" src="assets/republic-gray.png" alt="Republic">
+            <h2>At the moment, no clones being delivery to the Empire.</h2>
+        </div>
+    </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+    <p>Footer Text</p>
+</footer>

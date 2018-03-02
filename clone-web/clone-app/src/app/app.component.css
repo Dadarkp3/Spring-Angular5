@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lato:400,700);
+.header-text {
+    margin-top: 27vh;
+    padding: 0 1rem;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+.row.content {
+    height: 450px
+}
+
+
+/* Set gray background color and 100% height */
+
+
+/* Set black background color, white text and some padding */
+
+footer {
+    background-color: #020202;
+    color: white;
+    padding: 15px;
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
+
+.logo-img {
+    width: 1.4em;
+}
+
+.jumbotron {
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url('/assets/headerbg1.jpg');
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-shadow: 2px -1px 0px rgba(0, 0, 0, 0.4);
+    padding-top: 0;
+}
+
+body {
+    overflow-x: hidden;
+    color: #212121;
+}
+
+p {
+    font-size: 20px;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border-bottom: 0.5rem solid #6f1b1c;
+}
+
+.navbar a:hover {
+    color: #6f1b1c;
+}
+
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+.navbar-color {
+    background-color: #212121;
+}
+
+.navbar a:focus {
+    outline: 0;
+}
+
+.navbar .navbar-nav {
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-nav li a:focus {
+    outline: 0;
+}
+
+.republic {
+    background: gray url('/assets/stardust.png') repeat 0 0;
+    width: 98vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+    padding-top: 120px;
+    box-sizing: border-box;
+    -webkit-animation: slide 4s linear infinite;
+    opacity: 0.83;
+}
+
+.hero-bkg-animated h1 {
+    font-family: sans-serif;
+}
+
+@-webkit-keyframes slide {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -400px 0;
+    }
+}
+
+.img-home {
+    border-radius: 100%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+hr {
+    border-top: 1px solid #6f1b1c;
+    width: 80%;
+}
+
+.quote {
+    font-style: oblique;
+    float: right;
+}
+
+.home {
+    padding-bottom: 2em;
+}
+
+.list {
+    padding-bottom: 5rem;
+    background-color: #f4f5fa;
+    background-attachment: scroll;
+    width: 100%;
+}
+
+.list h3 {
+    padding: 2em 2em 0 2em;
+}
+
+.list hr {
+    width: 60%;
+    float: left;
+    margin-left: 3em;
+    margin-bottom: 3em;
+}
+
+.list .img-home {
+    margin-left: 0 !important;
+}
+
+.btn-outline-danger {
+    color: #b33132;
+    border-color: #b33132;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.btn-outline-danger:hover {
+    color: white;
+    border-color: #b33132;
+    background-color: #b33132;
+}
+
+.btn-outline-edit {
+    color: #28a745;
+    border-color: #28a745;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.btn-outline-edit:hover {
+    color: white;
+    border-color: #28a745;
+    background-color: #28a745 !important;
+}
